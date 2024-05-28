@@ -1,6 +1,5 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Button from "@/components/views/button";
+import Navbar from "./components/views/app-header";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
@@ -9,7 +8,7 @@ export default function Home() {
       </div>
 
       <div className={styles.center}>
-        <Button label="submit" title="hj"/>
+        Hello Traveller!
       </div>
     </main>
   );
