@@ -1,0 +1,21 @@
+@import "../../../styles/importer";
+.li-cont {
+    display: flex;
+    gap: 4px;
+    .li-icon {
+        display: flex;
+    }
+    .li-text {
+        display: flex;
+        font-size: var(--fs-3);
+        font-weight: var(--fw-medium);
+        line-height: 150%;
+        letter-spacing: 0.15px;
+        align-items: center;
+        color: #939393;
+
+        &.selected {
+            color: #000000;
+        }
+    }
+}

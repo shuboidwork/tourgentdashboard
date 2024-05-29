@@ -1,0 +1,22 @@
+/**
+  This file contains variables related to the typography, like:
+  font-sizes, font-families, line-heights, text-decorations etc.
+*/
+
+:root {
+    --fs-1: 0;
+    --fs-2: 0; 
+    --fs-3: 16px;
+    --fs-4: 1;
+    --fs-5: 1;
+    --fs-6: 24px;
+    --fs-7: 1;
+    --fs-8: 2;
+    --fs-9: 3;
+  
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black:900;
+  }

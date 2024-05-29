@@ -1,15 +1,11 @@
-import Navbar from "./components/views/app-header";
+import React from "react";
 import styles from "./page.module.scss";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-      </div>
-
-      <div className={styles.center}>
-        Hello Traveller!
-      </div>
+      <div className={styles.description}></div>
+      <div className={styles.center}>Hello Traveller!</div>
     </main>
   );
 }

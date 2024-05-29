@@ -1,0 +1,20 @@
+@import '../../../styles/importer';
+.apphd-lgo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+
+  .apphd-lgo-txt{
+    display: flex;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-6);
+    line-height: 160%;
+    font-family: var(--font-poppins);
+    filter: drop-shadow(#939393 2px 4px 2px);
+    background: -webkit-linear-gradient(51deg, #ED1C24, #FCEC21);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
