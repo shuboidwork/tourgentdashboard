@@ -19,8 +19,9 @@ export default function RootLayout({ children }) {
       <body className={`${poppins}`}>
         <AppRouterCacheProvider>
           <StyledRoot>
-            <NavigationMenu items={MenuItems}/>
-            <Suspense fallback={<Loading />}>{children}</Suspense>
+            <NavigationMenu items={MenuItems}>
+                <Suspense fallback={<Loading />}>{children}</Suspense>
+            </NavigationMenu>
           </StyledRoot>
         </AppRouterCacheProvider>
       </body>
