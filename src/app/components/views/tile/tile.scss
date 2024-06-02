@@ -1,0 +1,31 @@
+.tile-cont {
+    // TODO: Use variables
+    display: flex;
+    border: #eaeaea 1px solid;
+    border-radius: 12px;
+    align-items: center;
+
+    overflow: hidden;
+    &.primary {
+        color: #ffffff;
+    }
+    &.secondary {
+        color: #ffffff;
+    }
+    &.gray {
+        color: #eaeaea;
+    }
+
+    &.sm {
+        padding: 4px 12px;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 12px;
+    }
+    &.lg {
+        padding: 4px 12px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+    }
+}

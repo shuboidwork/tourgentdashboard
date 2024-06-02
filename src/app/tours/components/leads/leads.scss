@@ -1,0 +1,31 @@
+@import "../../../styles/importer";
+.leads-cont {
+    display: flex;
+    border-radius: 10px;
+    width: 100%;
+    flex-direction: column;
+
+    .leads-header {
+        display: flex;
+        padding: 24px;
+        width: 100%;
+        justify-content: space-between;
+        .leads-hd-title {
+            display: flex;
+            font-weight: var(--fw-regular);
+            font-size: var(--fs-4);
+            line-height: var(--fs-6);
+        }
+        .leads-hd-opts {
+            display: flex;
+            gap: 12px;
+        }
+    }
+    .leads-list {
+        display: flex;
+        padding: 18px 16px;
+        gap: 18px;
+        flex-direction: column;
+        width: 100%;
+    }
+}

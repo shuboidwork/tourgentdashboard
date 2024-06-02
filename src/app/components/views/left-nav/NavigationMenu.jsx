@@ -73,7 +73,7 @@ const NavigationMenu = ({ items = [], children }) => {
           </Box>
         </Drawer>
       </Grid2>
-      <Box md={12} sx={{ flexGrow: 1, p: 2 }}>
+      <Box md={12} sx={{ flexGrow: 1, p: 3}}>
         <Toolbar />
         {children}
       </Box>
@@ -82,5 +82,6 @@ const NavigationMenu = ({ items = [], children }) => {
 };
 NavigationMenu.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({})),
+  children: PropTypes.shape({}),
 };
 export default NavigationMenu;
