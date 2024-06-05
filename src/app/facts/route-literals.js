@@ -7,4 +7,6 @@ export default {
   community: "community",
   website: "website",
   settings: "settings",
+  leads: "leads",
+  varLead: ":leadId",
 };

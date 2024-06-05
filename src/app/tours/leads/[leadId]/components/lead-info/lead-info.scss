@@ -1,0 +1,68 @@
+@import "../../../../../styles/importer";
+.ld-info-cont {
+    display: flex;
+    .ld-info-lft {
+        display: flex;
+        flex-direction: column;
+        width: 236px;
+        border-radius: 10px 0 0 10px;
+        padding: 24px;
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 74px;
+
+            .ld-info-avatar {
+                display: flex;
+                width: 80px;
+                height: 80px;
+            }
+            .ld-info-name {
+                font-size: var(--fs-4);
+                font-weight: var(--fw-semibold);
+                line-height: var(--fs-7);
+            }
+        }
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 23px;
+            font-weight: var(--fw-regular);
+            font-size: var(--fs-1);
+            line-height: var(--fs-5);
+            color: var(--black);
+
+            .info-block {
+                display: flex;
+                gap: 7px;
+                flex-direction: column;
+
+                .info-heading {
+                    font-weight: var(--fw-medium);
+                    font-size: var(--fs-2);
+                    margin-bottom: 5px;
+                }
+
+                .info-tile {
+                    display: flex;
+                    gap: 2px;
+                    .icon {
+                        width: 20px;
+                        height: 20px;
+                        color: var(--gray);
+                    }
+                    .text {
+                    }
+                }
+            }
+        }
+    }
+    .ld-info-rgt {
+        display: flex;
+        width: 100%;
+    }
+}

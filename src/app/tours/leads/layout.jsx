@@ -3,7 +3,7 @@ import React from "react";
 export default function ToursLayout({
     children,
   }) {
-    return <section>{children}</section>
+    return <>{children}</>
   }
 
   ToursLayout.propTypes = {

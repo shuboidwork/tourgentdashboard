@@ -21,10 +21,10 @@ const drawerWidth = 240;
 const Sidebar = ({ items = [] }) => {
   const pathName = usePathname();
   return (
-    <List style={{ "padding-top": "12px" }}>
+    <List >
       {items.map(({ id, label, link, icon }) => {
         const ItemIcon = Icons[icon];
-        const selected = link === pathName;
+        const selected = pathName.includes(link);
         return (
           <ListItem
             component={Link}

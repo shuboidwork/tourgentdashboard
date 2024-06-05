@@ -11,6 +11,14 @@ import {
   CallOutlined,
   EmailOutlined,
   MoreVert,
+  PinDropOutlined,
+  AllInclusiveOutlined,
+  FastfoodOutlined,
+  RestaurantOutlined,
+  AccountCircleOutlined,
+  GirlOutlined,
+  RefreshOutlined,
+  WorkOutlineOutlined,
 } from "@mui/icons-material";
 
 const IMap = {
@@ -26,6 +34,14 @@ const IMap = {
   CALL_OL: CallOutlined,
   EMAIL_OL: EmailOutlined,
   MORE_VERTICLE: MoreVert,
+  LOCATION_OL: PinDropOutlined,
+  ALL_INCLUSIVE_OL: AllInclusiveOutlined,
+  FAST_FOOD_OL: FastfoodOutlined,
+  RESTAURENT_OL: RestaurantOutlined,
+  ACCOUNT_CIRCLE_OL: AccountCircleOutlined,
+  GIRL_OL: GirlOutlined,
+  REFRESH_OL: RefreshOutlined,
+  WORK_OL: WorkOutlineOutlined
 };
 
 // IconTypes is derived from IMap to maintain a unified list and ensure a single source of truth

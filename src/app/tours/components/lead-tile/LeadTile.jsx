@@ -10,8 +10,12 @@ import { man } from "../../.././../../public/images/man.png";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import { Statuses, TravellerTypes } from "./constants";
+import RouteUrls from "@/app/facts/route-urls";
+import { createRoutePath } from "@/app/utils/util";
+import Link from "next/link";
 
 const LeadTile = ({
+  id= 1,
   name = "Name",
   phone = "8989892222",
   email = "tourgent@gmail.com",
@@ -88,7 +92,7 @@ const LeadTile = ({
             <Icon icon={IconTypes.MORE_VERTICLE} className="ld-more-icon" />
           </div>
           <div className="ld-rgt-btm">
-            <div>More Info</div>
+            <Link href={createRoutePath(RouteUrls.lead, {leadId: id})}>More Info</Link>
             <Icon className="ld-arrow-icon" icon={IconTypes.ARROW_RIGHT} />
           </div>
         </div>
@@ -96,7 +100,7 @@ const LeadTile = ({
     );
   };
 
-  return <Tile content={getView()} color={"gray"} />;
+  return <Tile content={getView()} color={"gray"} key={id} />;
 };
 LeadTile.propTypes = {
   id: PropTypes.string,

@@ -8,4 +8,6 @@ export default {
   community: `/${RL.community}`,
   website: `/${RL.website}`,
   settings: `/${RL.settings}`,
+  leads: `/${RL.tours}/${RL.leads}`,
+  lead: `/${RL.tours}/${RL.leads}/${RL.varLead}`,
 };
