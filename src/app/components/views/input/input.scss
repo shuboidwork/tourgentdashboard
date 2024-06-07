@@ -1,10 +1,10 @@
 @import "../../../styles/importer";
-.input-cont{
+.input-cont {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
-    .input-label{
+    .input-label {
         display: flex;
         font-weight: var(--fw-regular);
         font-size: var(--fs-1);
@@ -12,15 +12,19 @@
         color: var(--black);
         margin-left: 4px;
     }
-    .inp{
+    .inp {
         display: flex;
-        border-radius: 6px;
-        border: 1px solid var(--secondary-border);
+        font-family: (--font-poppins) !important;
+        border-radius: 6px !important;
+        border: 1px solid var(--secondary-border) !important;
+        font-weight: 400 !important;
+        font-size: var(--fs-0) !important;
+        line-height: var(--fs-3) !important;
 
-        &.text{
+        &.text {
         }
     }
-    .inp:focus{
+    .inp:focus {
         border-radius: 6px;
         border: 1px solid var(--secondary-border);
     }
