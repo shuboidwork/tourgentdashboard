@@ -1,4 +1,4 @@
-@import "../../../styles/importer";
+@import "../../../../styles/importer";
 
 .ld-cont {
     display: flex;
@@ -114,17 +114,7 @@
                 width: 132px;
                 border-radius: 20px;
                 justify-content: center;
-                background: linear-gradient(
-                    55deg,
-                    hsl(263deg 78% 53%) 0%,
-                    hsl(264deg 70% 60%) 14%,
-                    hsl(268deg 61% 64%) 25%,
-                    hsl(276deg 52% 68%) 36%,
-                    hsl(288deg 42% 70%) 49%,
-                    hsl(309deg 38% 74%) 67%,
-                    hsl(332deg 50% 80%) 100%
-                );
-
+                background: linear-gradient(90deg, rgba(112, 40, 228, 0.4) 0%, rgba(229, 178, 202, 0.4) 100%);
                 color: var(--black);
             }
             .ld-more-icon {

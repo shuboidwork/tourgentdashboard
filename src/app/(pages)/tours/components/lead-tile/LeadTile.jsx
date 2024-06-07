@@ -6,7 +6,6 @@ import Avatar from "@/app/components/views/avatar";
 import FlagIcon, { IconFlagTypes } from "@/app/components/views/flag-icon";
 import { IconTypes } from "@/app/facts/icon-list";
 import Icon from "@/app/components/views/icon";
-import { man } from "../../.././../../public/images/man.png";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import { Statuses, TravellerTypes } from "./constants";
@@ -32,7 +31,7 @@ const LeadTile = ({
       <div className="ld-cont">
         <div className="ld-lft">
           <div className="ld-avatar">
-            <Avatar src={man} />
+            <Avatar />
           </div>
           <div className="ld-countries">
             <FlagIcon height="15px" width="30px" type={IconFlagTypes.INDIA} />

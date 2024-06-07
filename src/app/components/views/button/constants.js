@@ -13,15 +13,6 @@ export const ButtonTypesVariantMap = {
 
 };
 
-export const ButtonColors = {
-    PRIMARY: 'primary',
-    SECONDARY: 'secondary',
-    ERROR: 'error',
-    WARNING: 'warning',
-    INFO: 'info',
-    SUCCESS: 'success'
-};
-
 export const ButtonSizes = {
     SMALL: 'small',
     MEDIUM: 'medium',
