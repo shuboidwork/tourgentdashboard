@@ -15,6 +15,7 @@ const MuiInput = ({
   validate,
   errorText,
   row,
+  ...props
 }) => {
   const [inputType, setInputType] = useState(type);
   const [error, setError] = useState(false);
@@ -83,6 +84,7 @@ const MuiInput = ({
         type={inputType}
         InputProps={inputProps}
         {...extraProps}
+        {...props}
         error={error}
         helperText={error ? errorMessage : ""}
         onBlur={(e) => handleValidation(e.target.value)}

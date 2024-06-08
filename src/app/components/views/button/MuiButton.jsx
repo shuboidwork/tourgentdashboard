@@ -1,11 +1,11 @@
-'use client';
+"use client";
 import React from "react";
 import { Button, IconButton } from "@mui/material";
-import {ButtonSizes, ButtonTypes, ButtonTypesVariantMap } from "./constants";
+import { ButtonSizes, ButtonTypes, ButtonTypesVariantMap } from "./constants";
 import PropTypes from "prop-types";
 import Icon from "../icon";
 import clsx from "clsx";
-import './button.scss';
+import "./button.scss";
 
 const MuiButton = ({
   id,
@@ -15,11 +15,13 @@ const MuiButton = ({
   href,
   disabled,
   icon,
-  className
+  className,
+  iconProps = {},
+  ...props
 }) => {
   const handleClick = () => {
     onClick && onClick(id);
-  }
+  };
   const getButtonView = () => {
     switch (type) {
       case ButtonTypes.ICON:
@@ -29,8 +31,9 @@ const MuiButton = ({
             aria-label={title}
             disabled={disabled}
             disableRipple
+            {...props}
           >
-            <Icon icon={icon} className={className}/>
+            <Icon icon={icon} className={className} {...iconProps} />
           </IconButton>
         );
       case "Link":
@@ -41,8 +44,11 @@ const MuiButton = ({
             onClick={handleClick}
             disableElevation
             disabled={disabled}
-            className={clsx('link', className)}
-          >{title}</Button>
+            className={clsx("link", className)}
+            {...props}
+          >
+            {title}
+          </Button>
         );
       default:
         return (
@@ -51,7 +57,8 @@ const MuiButton = ({
             onClick={handleClick}
             disableElevation
             disabled={disabled}
-            className={clsx('btn', type, className)}
+            className={clsx("btn", type, className)}
+            {...props}
           >
             {title}
           </Button>
