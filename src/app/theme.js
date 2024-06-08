@@ -1,21 +1,27 @@
 "use client";
 import { createTheme } from "@mui/material/styles";
-import { Roboto } from "next/font/google";
+// import { poppins_init } from "./utils/fonts";
 
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
+// const { fontFamily } = poppins_init.style;
+
 
 const theme = createTheme({
   zIndex: {
     drawer: 1200,
     appBar: 1300,
   },
-  typography: {
-    fontFamily: roboto.style.fontFamily,
-  },
+  // components: {
+  //   MuiTypography: {
+  //     defaultProps: {
+  //       fontFamily: fontFamily,
+  //     },
+  //   },
+  // },
+  // typography: {
+  //   fontFamily: [
+  //     fontFamily
+  //   ].join(','),
+  // },
   palette: {
     primary: {
       main: "#FFFFFF",
