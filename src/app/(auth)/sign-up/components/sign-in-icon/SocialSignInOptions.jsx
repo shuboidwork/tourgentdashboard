@@ -1,22 +1,24 @@
 "use client";
+import React from "react";
 import SignInIcon from "./SignInIcon";
 import Box from "@mui/material/Box";
-import { SignUpIconTypeMap } from "../sign-up-form/constants";
+import {
+  SignUpIconInfoMap,
+  SignUpIcons,
+} from "../sign-up-form/constants";
 
 const SocialSignInOptions = ({ ...props }) => {
-  const getSocialIcon = (iconName) => {
-    return SignUpIconTypeMap[iconName];
-  };
-
   return (
     <Box>
-      {Object.keys(SignUpIconTypeMap).map((icon) => {
-        const displayIcon = getSocialIcon(icon);
+      {Object.values(SignUpIcons).map((i) => {
+        const info = SignUpIconInfoMap[i];
+
+        const { icon, disabled } = info;
         return (
           <SignInIcon
             key={icon}
-            displayIcon={displayIcon}
             icon={icon}
+            disabled={disabled}
             size="small"
             iconProps={{
               fontSize: "large",

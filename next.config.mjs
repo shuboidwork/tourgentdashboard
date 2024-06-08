@@ -13,7 +13,7 @@ const nextConfig = {
         return [
           {
             source: '/',
-            destination: `/${RL.home}`,
+            destination: `/${RL.tours}`,
             permanent: false,
           },
           {

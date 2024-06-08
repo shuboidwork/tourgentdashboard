@@ -1,6 +1,5 @@
 import React from "react";
 import "./sign-up-form.scss";
-import Tile from "@/app/components/views/tile";
 import Button from "@/app/components/views/button";
 import { ButtonTypes } from "@/app/components/views/button/constants";
 import Input from "@/app/components/views/input";
@@ -11,91 +10,49 @@ import SocialSignInOptions from "../sign-in-icon/SocialSignInOptions";
 const SignUp = () => {
   const getView = () => {
     return (
-      <>
-        <Paper variant="outlined" sx={{ px: 14, py: 8, textAlign: "center" }}>
-          <Box sx={{ minWidth: "400px" }}>
-            <Box className="sgnup-hdr" sx={{ fontSize: "h4.fontSize" }}>
-              Create Your Account
-            </Box>
-            <Box sx={{ fontSize: "h7.fontSize", mt: 4 }}>Sign-up with</Box>
-            <Box sx={{ mt: 2 }}>
-              <SocialSignInOptions />
-            </Box>
-            <Box sx={{ my: 3 }}>OR</Box>
-            <Box sx={{ mb: 6 }}>
-              <Stack direction="row" spacing={2} sx={{ my: 3 }}>
-                <Input label="First Name" />
-                <Input label="Last Name" />
-              </Stack>
-
-              <Stack direction="row" spacing={2} sx={{ my: 3 }}>
-                <Input label="Email Address" />
-              </Stack>
-
-              <Stack direction="row" spacing={2} sx={{ my: 3 }}>
-                <Input label="Password" type="password" />
-              </Stack>
-            </Box>
-            <Box>
-              <Stack direction="row" spacing={4}>
-                <Button
-                  type={ButtonTypes.SECONDARY}
-                  sx={{ px: 2 }}
-                  title="Login"
-                />
-                <Button
-                  type={ButtonTypes.PRIMARY}
-                  sx={{ px: 2 }}
-                  title="Sign In"
-                />
-              </Stack>
-            </Box>
+      <Paper className="sgnup-form-cont" variant="outlined" sx={{ px: 14, py: 8, textAlign: "center" }}>
+        <Box sx={{ minWidth: "400px" }}>
+          <Box className="sgnup-hdr" sx={{ fontSize: "h4.fontSize" }}> 
+            Create Your Account
           </Box>
-        </Paper>
-        <Paper variant="outlined" sx={{ px: 14, py: 8, textAlign: "center" }}>
-          <Box sx={{ minWidth: "400px" }}>
-            <Box className="sgnup-hdr" sx={{ fontSize: "h4.fontSize" }}>
-              Create Your Account
-            </Box>
-            <Box sx={{ fontSize: "h7.fontSize", mt: 4 }}>Sign-up with</Box>
-            <Box sx={{ mt: 2 }}>
-              <SocialSignInOptions />
-            </Box>
-            <Box sx={{ my: 3 }}>OR</Box>
-            <Box sx={{ mb: 6 }}>
-              <Stack direction="row" spacing={2} sx={{ my: 3 }}>
-                <Input label="First Name" />
-                <Input label="Last Name" />
-              </Stack>
-
-              <Stack direction="row" spacing={2} sx={{ my: 3 }}>
-                <Input label="Email Address" />
-              </Stack>
-
-              <Stack direction="row" spacing={2} sx={{ my: 3 }}>
-                <Input label="Password" type="password" />
-              </Stack>
-            </Box>
-            <Box>
-              <Stack direction="row" spacing={4}>
-                <Button
-                  type={ButtonTypes.SECONDARY}
-                  sx={{ px: 2 }}
-                  title="Login"
-                />
-                <Button
-                  type={ButtonTypes.PRIMARY}
-                  sx={{ px: 2 }}
-                  title="Sign In"
-                />
-              </Stack>
-            </Box>
+          <Box  className="sgnup-sub-hdr">Sign-up with</Box>
+          <Box className="sgnup-with">
+            <SocialSignInOptions />
           </Box>
-        </Paper>
-      </>
+          <Box className="sgnup-sub-hdr">or</Box>
+          <Box sx={{ mb: 6 }}>
+            <Stack direction="row" spacing={2} sx={{ my: 3 }}>
+              <Input label="First Name" />
+              <Input label="Last Name" />
+            </Stack>
+
+            <Stack direction="row" spacing={2} sx={{ my: 3 }}>
+              <Input label="Email Address" />
+            </Stack>
+
+            <Stack direction="row" spacing={2} sx={{ my: 3 }}>
+              <Input label="Password" type="password" />
+            </Stack>
+          </Box>
+          <Box className="sgnup-buttons">
+            <Stack direction="row" spacing={4}>
+              <Button
+                type={ButtonTypes.SECONDARY}
+                sx={{ px: 2 }}
+                title="Login"
+              />
+              <Button
+                type={ButtonTypes.PRIMARY}
+                sx={{ px: 2 }}
+                title="Sign In"
+              />
+            </Stack>
+          </Box>
+        </Box>
+      </Paper>
     );
   };
-  return <Tile className="sgnup-form-cont" content={getView()} />;
+  return getView();
 };
 
 export default SignUp;

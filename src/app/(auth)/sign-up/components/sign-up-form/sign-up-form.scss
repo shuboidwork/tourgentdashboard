@@ -1,0 +1,39 @@
+@import "../../../../styles/importer";
+
+.sgnup-form-cont{
+    background: var(--white) !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    color: var(--black) !important;
+
+    .sgnup-hdr{
+        font-weight: var(--fw-medium) !important;
+        font-size: var(--fs-6) !important;
+        line-height: var(--fs-9) !important;
+    }
+
+    .sgnup-sub-hdr{
+        font-weight: var(--fw-regular) !important;
+        font-size: var(--fs-4) !important;
+        line-height: var(--fs-7) !important;
+        margin-top: 32px !important;
+    }
+    
+    .sgnup-with{
+        margin-top: 14px;
+        gap: 32px;
+
+        .sgnup-with-icon{
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    .sgnup-buttons{
+        margin-top: 52px;
+
+    }
+    
+
+}

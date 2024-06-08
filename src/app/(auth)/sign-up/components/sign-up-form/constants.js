@@ -6,8 +6,18 @@ export const SignUpIcons = {
     INSTAGRAM: 'instagram'
 }
 
-export const SignUpIconTypeMap = { 
-    [SignUpIcons.GOOGLE]: IconTypes.GOOGLE,
-    [SignUpIcons.FACEBOOK]: IconTypes.FACEBOOK,
-    [SignUpIcons.INSTAGRAM]: IconTypes.INSTAGRAM,
+export const SignUpIconInfoMap = { 
+    [SignUpIcons.GOOGLE]: {
+        icon: IconTypes.GOOGLE,
+        disabled: false,
+    },
+    [SignUpIcons.FACEBOOK]:  {
+        icon: IconTypes.FACEBOOK,
+        disabled: true,
+    },
+   
+    [SignUpIcons.INSTAGRAM]:  {
+        icon: IconTypes.INSTAGRAM,
+        disabled: true,
+    }
 }
