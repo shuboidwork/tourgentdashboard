@@ -1,13 +1,9 @@
 import React from "react";
 import "./sign-up-form.scss";
 import Tile from "@/app/components/views/tile";
-import { SignUpIconInfoMap, SignUpIcons } from "./constants";
 import Button from "@/app/components/views/button";
 import { ButtonTypes } from "@/app/components/views/button/constants";
 import Input from "@/app/components/views/input";
-import { Paper, Stack } from "@mui/material";
-import Box from "@mui/material/Box";
-import SocialSignInOptions from "../sign-in-icon/SocialSignInOptions";
 import { Paper, Stack } from "@mui/material";
 import Box from "@mui/material/Box";
 import SocialSignInOptions from "../sign-in-icon/SocialSignInOptions";
