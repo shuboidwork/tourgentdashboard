@@ -2,21 +2,19 @@
 import React from "react";
 import SignInIcon from "./SignInIcon";
 import Box from "@mui/material/Box";
-import {
-  SignUpIconInfoMap,
-  SignUpIcons,
-} from "../sign-up-form/constants";
+import { SignUpIconInfoMap, SignUpProviders } from "../sign-up-form/constants";
 
 const SocialSignInOptions = ({ ...props }) => {
   return (
     <Box>
-      {Object.values(SignUpIcons).map((i) => {
-        const info = SignUpIconInfoMap[i];
+      {Object.values(SignUpProviders).map((signupProvider) => {
+        const info = SignUpIconInfoMap[signupProvider];
 
         const { icon, disabled } = info;
         return (
           <SignInIcon
-            key={icon}
+            key={signupProvider}
+            provider={signupProvider}
             icon={icon}
             disabled={disabled}
             size="small"

@@ -8,13 +8,20 @@ import NavigationMenu from "../components/views/left-nav";
 import { poppins } from "../utils/fonts";
 import MenuItems from "../constants/menu-items";
 import Providers from "../components/enhancers/Providers";
+import { checkIsLoggedIn } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
 export const metadata = {
   title: "Tourgent",
   description: "Tourgent",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const isUserLoggedIn = await checkIsLoggedIn();
+  if (!isUserLoggedIn) {
+    redirect("/sign-up");
+  }
+
   return (
     <html lang="en">
       <body className={`${poppins}`}>
