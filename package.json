@@ -19,6 +19,7 @@
     "clsx": "^2.1.1",
     "material-ui-flags": "^1.2.4",
     "next": "14.2.3",
+    "next-auth": "^4.24.7",
     "path-to-regexp": "^6.2.2",
     "prop-types": "^15.8.1",
     "react": "^18",

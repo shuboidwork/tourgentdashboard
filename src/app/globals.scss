@@ -1,8 +1,11 @@
-@import  "./styles/normalize.scss";
-@import  "./styles/skeleton";
+@import "./styles/normalize.scss";
+@import "./styles/skeleton";
+:root {
+  --font-poppins: 'Poppins', sans-serif;
+}
 
 * {
-  font-family: var(--font-poppins);
+  font-family: var(--font-poppins) !important;
   box-sizing: border-box;
 }
 

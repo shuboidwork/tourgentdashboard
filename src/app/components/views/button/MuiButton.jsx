@@ -1,8 +1,11 @@
-'use client';
+"use client";
 import React from "react";
 import { Button, IconButton } from "@mui/material";
-import { ButtonColors, ButtonSizes, ButtonTypes, ButtonTypesVariantMap } from "./constants";
+import { ButtonSizes, ButtonTypes, ButtonTypesVariantMap } from "./constants";
 import PropTypes from "prop-types";
+import Icon from "../icon";
+import clsx from "clsx";
+import "./button.scss";
 
 const MuiButton = ({
   id,
@@ -10,13 +13,15 @@ const MuiButton = ({
   onClick,
   title,
   href,
-  color = ButtonColors.PRIMARY,
   disabled,
-  icon
+  icon,
+  className,
+  iconProps = {},
+  ...props
 }) => {
   const handleClick = () => {
     onClick && onClick(id);
-  }
+  };
   const getButtonView = () => {
     switch (type) {
       case ButtonTypes.ICON:
@@ -24,10 +29,11 @@ const MuiButton = ({
           <IconButton
             onClick={handleClick}
             aria-label={title}
-            color={color}
             disabled={disabled}
+            disableRipple
+            {...props}
           >
-            {icon}
+            <Icon icon={icon} className={className} {...iconProps} />
           </IconButton>
         );
       case "Link":
@@ -36,19 +42,23 @@ const MuiButton = ({
             variant={type}
             href={href}
             onClick={handleClick}
-            color={color}
             disableElevation
             disabled={disabled}
-          >{title}</Button>
+            className={clsx("link", className)}
+            {...props}
+          >
+            {title}
+          </Button>
         );
       default:
         return (
           <Button
             variant={ButtonTypesVariantMap[type]}
             onClick={handleClick}
-            color={color}
             disableElevation
             disabled={disabled}
+            className={clsx("btn", type, className)}
+            {...props}
           >
             {title}
           </Button>
@@ -67,7 +77,6 @@ MuiButton.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   title: PropTypes.string,
-  color: PropTypes.oneOf(Object.values(ButtonColors)),
 };
 
 export default MuiButton;

@@ -19,6 +19,9 @@ import {
   GirlOutlined,
   RefreshOutlined,
   WorkOutlineOutlined,
+  Google,
+  Facebook,
+  Instagram,
 } from "@mui/icons-material";
 
 const IMap = {
@@ -41,7 +44,10 @@ const IMap = {
   ACCOUNT_CIRCLE_OL: AccountCircleOutlined,
   GIRL_OL: GirlOutlined,
   REFRESH_OL: RefreshOutlined,
-  WORK_OL: WorkOutlineOutlined
+  WORK_OL: WorkOutlineOutlined,
+  GOOGLE: Google,
+  FACEBOOK: Facebook,
+  INSTAGRAM: Instagram,
 };
 
 // IconTypes is derived from IMap to maintain a unified list and ensure a single source of truth

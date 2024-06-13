@@ -1,0 +1,21 @@
+@import "../../../styles/importer";
+
+.btn {
+    border-radius: 20px !important;
+    justify-content: center !important;
+    padding: 4px 10px !important;
+    font-weight: var(--fw-medium) !important;
+    font-size: var(--fs-1) !important;
+    line-height: var(--fs-6) !important;
+    width: 100%;
+
+    &.primary {
+        background: var(--primary-gradiant);
+        color: var(--white);
+    }
+
+    &.secondary {
+        border: 1px solid var(--secondary-border);
+        color: var(--gray);
+    }
+}
