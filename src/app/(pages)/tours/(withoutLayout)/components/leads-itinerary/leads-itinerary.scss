@@ -1,0 +1,42 @@
+.day-tabs{
+    display: flex;
+    width: 100%;
+    padding: 24px;
+    gap: 24px;
+    .day-tab{
+            display: flex;
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid #00000014;
+            align-items: center;
+            color: var(--gray);
+            font-weight: var(--fw-regular);
+            font-size: var(--fs-2);
+            line-height: var(--fs-5);
+
+
+            &.active{
+                color: var(--black);
+            }
+    }   
+}
+
+.day-content{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 40px;
+    width: 100%;
+    .day-frm-hdr{
+        font-weight: var(--fw-medium);
+        font-size: var(--fs-4);
+        line-height: var(--fs-7);
+        margin-bottom: 12px;
+    }
+    .day-frm{
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid #00000014;
+        color: var(--black);
+    }
+
+}

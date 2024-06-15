@@ -1,0 +1,9 @@
+.tours-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .tours-hdr-tiles{
+        display: flex;
+        justify-content: space-between;
+    }
+}

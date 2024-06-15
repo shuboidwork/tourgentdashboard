@@ -1,0 +1,38 @@
+
+.ldinf-hdr-cont{
+    display: flex;
+    gap: 16px;
+
+    .info-tile{
+        display: flex;
+        border-radius: 10px;
+        gap: 10px;
+        padding: 10px 26px;
+        border: 1px solid #00000014;
+        align-items: center;
+        color: var(--gray);
+
+        .info-icon{
+            width: 16px;
+            height: 16px;
+
+            &.active{
+                color: linear-gradient(180deg, #F83800 0%, #F8640A 100%);
+            }
+
+            &.disable{
+                pointer-events: none;
+            }
+        }
+        .info-lable{
+            font-weight: var(--fw-regular);
+            font-size: var(--fs-2);
+            line-height: var(--fs-5);
+            text-decoration: none;
+            color: var(--gray);
+            &.active{
+                color: var(--black);
+            }
+        }
+    }
+}

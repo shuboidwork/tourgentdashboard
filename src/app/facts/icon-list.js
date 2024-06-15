@@ -22,6 +22,15 @@ import {
   Google,
   Facebook,
   Instagram,
+  Face,
+  ContactPhone,
+  PendingActions,
+  Pending,
+  ContactPhoneOutlined,
+  FaceOutlined,
+  PendingActionsOutlined,
+  PendingOutlined,
+  AddIcCallOutlined,
 } from "@mui/icons-material";
 
 const IMap = {
@@ -48,6 +57,12 @@ const IMap = {
   GOOGLE: Google,
   FACEBOOK: Facebook,
   INSTAGRAM: Instagram,
+  FACE_OL: FaceOutlined,
+  CONTACT_PHONE_OL: ContactPhoneOutlined,
+  PENDING_ACTIONS_OL: PendingActionsOutlined,
+  PENDING_OL: PendingOutlined,
+  ADD_CALL_OL: AddIcCallOutlined
+
 };
 
 // IconTypes is derived from IMap to maintain a unified list and ensure a single source of truth

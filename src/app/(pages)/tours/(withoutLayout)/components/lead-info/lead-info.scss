@@ -1,4 +1,4 @@
-@import "../../../../../../styles/importer";
+@import "../../../../../styles/importer";
 .ld-info-cont {
     display: flex;
     .ld-info-lft {
@@ -63,6 +63,11 @@
     }
     .ld-info-rgt {
         display: flex;
+        flex-direction: column;
         width: 100%;
+        border-radius: 0px 10px;
+        border: 0px, 0px, 0px, 1px;
+        padding: 24px 40px 0 40px;
+        gap: 10px;
     }
 }

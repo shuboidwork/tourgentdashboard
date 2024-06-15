@@ -7,7 +7,7 @@ import { LeadInfoPropertiesIconMapping, LeadInfoSectionNamePropsMapping, LeadInf
 import Icon from "@/app/components/views/icon";
 import { IconTypes } from "@/app/facts/icon-list";
 
-const LeadInfo = () => {
+const LeadInfo = ({children}) => {
   const getView = () => {
     const getPropView = (property) => {
         return (<div className="info-tile" key={property}>
@@ -47,7 +47,9 @@ const LeadInfo = () => {
           </div>
         </div>
         <Divider type={DividerTypes.VERTICLE} />
-        <div className="ld-info-rgt"></div>
+        <div className="ld-info-rgt">
+          {children}
+        </div>
       </>
     );
   };
