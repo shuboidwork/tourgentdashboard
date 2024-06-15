@@ -4,28 +4,28 @@ import RouteUrls from "@/app/facts/route-urls";
 export const Tiles = [
     {
       label: "Activity Timeline",
-      icon: IconTypes.GLOBE,
+      icon: IconTypes.BAR_CHART,
       id: "activityTimeline",
       href: "",
       disabled: true,
     },
     {
       label: "Trip Details",
-      icon: IconTypes.GLOBE,
+      icon: IconTypes.APARTMENT,
       id: "tripDetails",
       href: "",
       disabled: true,
     },
     {
       label: "Itinerary",
-      icon: IconTypes.GLOBE,
+      icon: IconTypes.PENDING_ACTIONS_OL,
       id: "itinerary",
       href: RouteUrls.leadItinerary,
       disabled: false,
     },
     {
       label: "Notes",
-      icon: IconTypes.GLOBE,
+      icon: IconTypes.NOTES,
       id: "notes",
       href: "",
       disabled: true,

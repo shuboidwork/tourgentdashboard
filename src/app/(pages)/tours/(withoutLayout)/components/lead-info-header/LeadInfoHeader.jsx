@@ -13,9 +13,6 @@ import Tile from "@/app/components/views/tile";
 const LeadInfoHeader = () => {
   const { leadId } = useParams();
   const path = usePathname();
-  console.log("path");
-
-  console.log(path);
 
 
   const getTileView = ({ label, icon, href, disabled }) => {

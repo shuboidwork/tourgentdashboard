@@ -22,15 +22,15 @@ import {
   Google,
   Facebook,
   Instagram,
-  Face,
-  ContactPhone,
-  PendingActions,
-  Pending,
   ContactPhoneOutlined,
   FaceOutlined,
   PendingActionsOutlined,
   PendingOutlined,
   AddIcCallOutlined,
+  BarChart,
+  Apartment,
+  HistoryEdu,
+  LocationOnOutlined,
 } from "@mui/icons-material";
 
 const IMap = {
@@ -61,7 +61,11 @@ const IMap = {
   CONTACT_PHONE_OL: ContactPhoneOutlined,
   PENDING_ACTIONS_OL: PendingActionsOutlined,
   PENDING_OL: PendingOutlined,
-  ADD_CALL_OL: AddIcCallOutlined
+  ADD_CALL_OL: AddIcCallOutlined,
+  BAR_CHART: BarChart,
+  APARTMENT: Apartment,
+  NOTES: HistoryEdu,
+  LOCATION_ON_OL: LocationOnOutlined,
 
 };
 

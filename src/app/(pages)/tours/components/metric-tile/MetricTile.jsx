@@ -4,8 +4,10 @@ import "./metric-tile.scss";
 import Tile from "@/app/components/views/tile";
 import Icon from "@/app/components/views/icon";
 import PropTypes from "prop-types";
-import {redirect} from 'next/navigation'
+import {redirect, usePathname} from 'next/navigation'
+import clsx from "clsx";
 const MetricTile = ({id, icon, label, count, href}) => {
+  const path = usePathname();
 
   const onClickHandler = () => {
     redirect(href);
@@ -21,7 +23,7 @@ const MetricTile = ({id, icon, label, count, href}) => {
     );
   };
 
-  return <Tile className="mtrc-cont" content={getView()} key={id} onClick={onClickHandler} />;
+  return <Tile className={clsx("mtrc-cont", {active: path.includes(href)})} content={getView()} key={id} onClick={onClickHandler} />;
 };
 MetricTile.propTypes = {
   id: PropTypes.string,

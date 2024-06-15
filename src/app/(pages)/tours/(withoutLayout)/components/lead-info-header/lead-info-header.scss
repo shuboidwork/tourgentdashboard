@@ -13,11 +13,12 @@
         color: var(--gray);
 
         .info-icon{
-            width: 16px;
-            height: 16px;
+            width: 24px;
+            height: 24px;
 
             &.active{
-                color: linear-gradient(180deg, #F83800 0%, #F8640A 100%);
+                color: #F84B05;
+                //  linear-gradient(180deg, #F83800 0%, #F8640A 100%);
             }
 
             &.disable{

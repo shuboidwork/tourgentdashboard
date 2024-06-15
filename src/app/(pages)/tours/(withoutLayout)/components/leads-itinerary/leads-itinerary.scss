@@ -1,42 +1,100 @@
-.day-tabs{
+.day-tabs {
     display: flex;
     width: 100%;
     padding: 24px;
     gap: 24px;
-    .day-tab{
-            display: flex;
-            border-radius: 10px;
-            padding: 10px;
-            border: 1px solid #00000014;
-            align-items: center;
-            color: var(--gray);
-            font-weight: var(--fw-regular);
-            font-size: var(--fs-2);
-            line-height: var(--fs-5);
+    .day-tab {
+        display: flex;
+        border-radius: 10px;
+        padding: 10px;
+        border: 1px solid #00000014;
+        align-items: center;
+        color: var(--gray);
+        font-weight: var(--fw-regular);
+        font-size: var(--fs-2);
+        line-height: var(--fs-5);
 
+        &:hover{
+            color: var(--black);
+        }
 
-            &.active{
-                color: var(--black);
-            }
-    }   
+        &.active {
+            color: var(--black);
+            // border-color: #F84B05;
+        }
+    }
 }
 
-.day-content{
+.day-content {
     display: flex;
     flex-direction: column;
     padding: 12px 40px;
     width: 100%;
-    .day-frm-hdr{
+    .day-frm-hdr {
         font-weight: var(--fw-medium);
         font-size: var(--fs-4);
         line-height: var(--fs-7);
         margin-bottom: 12px;
     }
-    .day-frm{
-        width: 100%;
-        border-radius: 10px;
-        border: 1px solid #00000014;
-        color: var(--black);
-    }
+    .day-frm {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        gap: 32px;
+        .day-content-inp {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #00000014;
+            color: var(--black);
+            // background: #ffe17457;
+        }
+        .day-locs {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            
+            .day-loc {
+                display: flex;
+                font-weight: var(--fw-regular);
+                font-size: var(--fs-2);
+                line-height: var(--fs-5);
+                gap: 20px;
+                padding: 12px;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                border: 1px solid var(--secondary-border);
+                border-radius: 10px;
 
+                .loc-icon {
+                    height: 24px;
+                    width: 24px;
+                    color: var(--black);
+                }
+
+                .loc-name {
+                    color: var(--black);
+                    border: 0 0 1px 0;
+                    min-width: 200px;
+                    border: none !important;
+                }
+
+                .loc-url {
+                    color: #F84B05;
+                    text-decoration: none;
+                    border: 0 0 1px 0;
+                    min-width: 200px;
+                    border: none !important;
+                }
+                .loc-rmv{
+                    padding: 5px;
+                    color: var(--secondary-border);
+                    cursor: pointer;
+                    &:hover{
+                        color: #F84B05;
+                    }
+                }
+            }
+        }
+    }
 }

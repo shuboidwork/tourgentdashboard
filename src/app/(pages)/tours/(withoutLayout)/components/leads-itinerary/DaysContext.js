@@ -20,12 +20,16 @@ export const DaysProvider = ({ children }) => {
         setDays(days.map(day => day.id === dayId ? { ...day, content} : day));
     }
     
+    const setDayPlaces = (dayId, places) => {
+      setDays(days.map(day => day.id === dayId ? { ...day, places} : day));
+    }
+
     const switchDay = (id) =>{
         setActiveDay(id)
     }
 
   return (
-    <DaysContext.Provider value={{ days, activeDay, addDays, switchDay, setDayContent}}>
+    <DaysContext.Provider value={{ days, activeDay, addDays, switchDay, setDayContent, setDayPlaces}}>
       {children}
     </DaysContext.Provider>
   );
