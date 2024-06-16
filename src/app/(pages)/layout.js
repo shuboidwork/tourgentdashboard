@@ -7,9 +7,7 @@ import { StyledRoot } from "../StyledRoot";
 import NavigationMenu from "../components/views/left-nav";
 import { poppins } from "../utils/fonts";
 import MenuItems from "../constants/menu-items";
-import Providers from "../components/enhancers/Providers";
-import { checkIsLoggedIn } from "@/lib/auth";
-import { redirect } from "next/navigation";
+import { NextAuthProvider} from "../../context/SessionProvider";
 
 export const metadata = {
   title: "Tourgent",
@@ -17,21 +15,16 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  const isUserLoggedIn = await checkIsLoggedIn();
-  if (!isUserLoggedIn) {
-    redirect("/sign-up");
-  }
-
   return (
     <html lang="en">
       <body className={`${poppins}`}>
         <AppRouterCacheProvider>
           <StyledRoot>
-            <Providers>
+            <NextAuthProvider>
               <NavigationMenu items={MenuItems}>
                 <Suspense fallback={<Loading />}>{children}</Suspense>
               </NavigationMenu>
-            </Providers>
+            </NextAuthProvider>
           </StyledRoot>
         </AppRouterCacheProvider>
       </body>
