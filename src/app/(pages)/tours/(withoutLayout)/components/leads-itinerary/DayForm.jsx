@@ -9,7 +9,6 @@ import Place from "./Place";
 const DayForm = () => {
   const { days, activeDay, setDayContent, setDayPlaces} = useDays();
   const { content, id: dayId, label, places} = days.find((day) => day.id === activeDay) || {};
-  console.log(days);
 
   const addBullets = (items) => {
     if(!items || items == ""){
