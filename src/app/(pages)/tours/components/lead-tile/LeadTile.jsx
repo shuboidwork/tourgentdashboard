@@ -91,7 +91,7 @@ const LeadTile = ({
             <Icon icon={IconTypes.MORE_VERTICLE} className="ld-more-icon" />
           </div>
           <div className="ld-rgt-btm">
-            <Link href={createRoutePath(RouteUrls.lead, {leadId: id})}>More Info</Link>
+            <Link className="ld-link" href={createRoutePath(RouteUrls.lead, {leadId: id})}>More Info</Link>
             <Icon className="ld-arrow-icon" icon={IconTypes.ARROW_RIGHT} />
           </div>
         </div>

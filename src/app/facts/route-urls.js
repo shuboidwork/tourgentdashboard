@@ -2,6 +2,7 @@
 import RL from "./route-literals";
 
 export default {
+  default: '/',
   home: `/${RL.home}`,
   tours: `/${RL.tours}`,
   itinerary: `/${RL.itinerary}`,
@@ -10,4 +11,9 @@ export default {
   settings: `/${RL.settings}`,
   leads: `/${RL.tours}/${RL.leads}`,
   lead: `/${RL.tours}/${RL.leads}/${RL.varLead}`,
+  signIn: `/${RL.signIn}`,
+  upcomingCalls: `/${RL.tours}/${RL.upcomingCalls}`,
+  pendingItins: `/${RL.tours}/${RL.pendingItins}`,
+  pendingPayments: `/${RL.tours}/${RL.pendingPayments}`,
+  leadItinerary: `/${RL.tours}/${RL.leads}/${RL.varLead}/${RL.itinerary}`,
 };

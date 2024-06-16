@@ -15,6 +15,7 @@ const MuiInput = ({
   validate,
   errorText,
   row,
+  variant,
   ...props
 }) => {
   const [inputType, setInputType] = useState(type);
@@ -79,7 +80,7 @@ const MuiInput = ({
     return (
       <TextField
         id={id}
-        variant="outlined"
+        variant={variant || "outlined"}
         size={size}
         type={inputType}
         InputProps={inputProps}
@@ -89,7 +90,7 @@ const MuiInput = ({
         helperText={error ? errorMessage : ""}
         onBlur={(e) => handleValidation(e.target.value)}
         style={{
-          "& .MuiOutlinedInput-root": {
+          "& .MuiOutlinedInputRoot?": {
             "&.Mui-focused fieldset": {
               borderColor: "#000000",
             },
@@ -101,7 +102,7 @@ const MuiInput = ({
 
   return (
     <div className="input-cont">
-      <div className="input-label">{label}</div>
+      {variant ? null :<div className="input-label">{label}</div> }
       {getInputView()}
     </div>
   );

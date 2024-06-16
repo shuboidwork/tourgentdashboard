@@ -9,4 +9,9 @@ export default {
   settings: "settings",
   leads: "leads",
   varLead: ":leadId",
+  signIn: "sign-in",
+  signUp: "sign-up",
+  upcomingCalls: "upcoming-calls",
+  pendingItins: "pending-itineraries",
+  pendingPayments: "pending-payments",
 };

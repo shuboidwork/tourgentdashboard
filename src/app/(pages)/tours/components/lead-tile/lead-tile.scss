@@ -134,6 +134,24 @@
             font-weight: var(--fw-medium);
             color: var(--gray-10);
             gap: 8px;
+            .ld-link {
+                text-decoration: none;
+                color: var(--gray-10);
+            }
+
+            .ld-link {
+                text-decoration: none;
+                color: var(--gray-10);
+                
+                &:hover{
+                    color: #f84b05;
+                }
+    
+            }
+
+            &:hover{
+                color: #f84b05;
+            }
 
             .ld-arrow-icon {
                 width: 20px;
