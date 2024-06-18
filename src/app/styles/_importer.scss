@@ -5,3 +5,9 @@
 */
 @import "./typography";
 @import "./palette";
+@import "./images";
+
+/**
+  Dependent css should be imported at the end in this file
+*/
+@import "./mixins";

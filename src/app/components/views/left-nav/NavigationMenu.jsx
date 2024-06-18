@@ -24,7 +24,7 @@ const Sidebar = ({ items = [] }) => {
     <List >
       {items.map(({ id, label, link, icon }) => {
         const ItemIcon = Icons[icon];
-        const selected = pathName.includes(link);
+        const selected = pathName.startsWith(link);
         return (
           <ListItem
             component={Link}
@@ -58,9 +58,9 @@ const NavigationMenu = ({ items = [], children }) => {
       <Grid2 xs={12}>
         <AppHeader />
       </Grid2>
-      <Grid2 sx={{ width: drawerWidth }}>
+      <Grid2 sx={{ width: drawerWidth}} className="boxShadow">
         <Drawer variant="permanent">
-          <Toolbar />
+          <Toolbar/>
           <Box
             sx={{
               flexGrow: 1,

@@ -27,11 +27,18 @@
         .sgnup-with-icon{
             height: 40px;
             width: 40px;
+            color: var(--black);
+            
+            &:hover{
+                columns: var(--gray);
+            }
         }
     }
 
     .sgnup-buttons{
         margin-top: 52px;
+        display: flex;
+        justify-content: center;
     }
     
 

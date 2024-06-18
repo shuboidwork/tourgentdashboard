@@ -1,3 +1,4 @@
 import Input from "./MuiInput";
+import { InputTypeVariants } from "./constants";
 
-export default Input;
+export {Input as default, InputTypeVariants };

@@ -6,8 +6,9 @@ export const InputTypes = {
   EMAIL: "email",
   SEARCH: "search",
 };
-export const InputTypeMuiTypeMap= {
-    
+export const InputTypeVariants= {
+    OUTLINED: 'outlined',
+    STANDARD: 'standard',
 }
 
 export const InputSizes = {

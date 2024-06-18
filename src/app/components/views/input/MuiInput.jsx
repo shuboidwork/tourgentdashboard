@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { IconButton, InputAdornment, TextField } from "@mui/material";
 import "./input.scss";
 import clsx from "clsx";
-import { InputTypes } from "./constants";
+import { InputTypeVariants, InputTypes } from "./constants";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 const MuiInput = ({
@@ -14,7 +14,7 @@ const MuiInput = ({
   size,
   validate,
   errorText,
-  row,
+  rows,
   variant,
   ...props
 }) => {
@@ -39,7 +39,8 @@ const MuiInput = ({
   };
 
   const getInputView = () => {
-    let inputProps = { className: clsx("inp", type, className) };
+    const clsName =  clsx("inp", type, className);
+    let inputProps = { className: clsName};
     let extraProps = {};
     switch (type) {
       case InputTypes.PASSWORD:
@@ -70,7 +71,7 @@ const MuiInput = ({
       case InputTypes.MULTILINE:
         extraProps = {
           multiline: true,
-          row: row,
+          rows: rows,
         };
         break;
 
@@ -80,7 +81,7 @@ const MuiInput = ({
     return (
       <TextField
         id={id}
-        variant={variant || "outlined"}
+        variant={variant || InputTypeVariants.OUTLINED}
         size={size}
         type={inputType}
         InputProps={inputProps}
@@ -102,7 +103,7 @@ const MuiInput = ({
 
   return (
     <div className="input-cont">
-      {variant ? null :<div className="input-label">{label}</div> }
+      {variant ? null : <div className="input-label">{label}</div> }
       {getInputView()}
     </div>
   );

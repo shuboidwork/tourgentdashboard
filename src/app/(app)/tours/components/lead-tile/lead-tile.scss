@@ -1,0 +1,164 @@
+@import "../../../../styles/importer";
+
+.ld-cont {
+    display: flex;
+    padding: 16px;
+    gap: 32px;
+    width: 100%;
+    color: var(--gray);
+
+    .ld-lft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        .ld-avatar {
+            height: 50px;
+            width: 50px;
+        }
+        .ld-countries {
+            display: flex;
+            gap: 3px;
+            align-items: center;
+        }
+    }
+    .ld-mid {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        font-weight: var(--fw-medium);
+
+        .ld-header {
+            display: flex;
+            gap: 7px;
+            color: var(--black);
+            .ld-name {
+                font-size: var(--fs-2);
+                line-height: var(--fs-6);
+            }
+            .ld-status {
+                color: var(--black);
+
+                &.blue {
+                    background-color: var(--blue);
+                }
+            }
+        }
+        .ld-contact-dtls {
+            display: flex;
+            gap: 32px;
+            font-size: var(--fs-1);
+            line-height: var(--fs-5);
+            font-weight: 400;
+            color: var(--black);
+            .ld-contact-item {
+                display: flex;
+                gap: 2px;
+                align-items: center;
+
+                .ld-icon {
+                    color: var(--gray);
+                }
+            }
+        }
+        .ld-info {
+            display: flex;
+            gap: 24px;
+            font-size: var(--fs-1);
+            line-height: var(--fs-5);
+            color: var(--black);
+            .ld-dates {
+                display: flex;
+                align-items: center;
+                line-height: var(--fs-4);
+                gap: 6px;
+                .ld-date {
+                    display: flex;
+                }
+                .ld-icon {
+                    color: var(--gray);
+                }
+            }
+            .ld-task {
+                .ld-item {
+                    display: flex;
+                    gap: 2px;
+                    align-items: center;
+
+                    .ld-icon {
+                        color: var(--gray);
+                    }
+                }
+            }
+            .ld-type {
+                .ld-item {
+                    display: flex;
+                    gap: 2px;
+
+                    .ld-icon {
+                        color: var(--gray);
+                    }
+                }
+            }
+        }
+    }
+    .ld-rgt {
+        display: flex;
+        margin-left: auto;
+        flex-direction: column;
+        .ld-rgt-top {
+            display: flex;
+            gap: 23px;
+
+            .ld-call {
+                height: 32px;
+                width: 132px;
+                border-radius: 20px;
+                justify-content: center;
+                background: linear-gradient(90deg, rgba(112, 40, 228, 0.4) 0%, rgba(229, 178, 202, 0.4) 100%);
+                color: var(--black);
+            }
+            .ld-more-icon {
+                width: var(--fs-6);
+                height: var(--fs-6);
+                margin-top: 4px;
+                color: var(--black);
+            }
+        }
+        .ld-rgt-btm {
+            display: flex;
+            align-self: flex-end;
+            align-items: center;
+            margin-top: auto;
+            font-size: var(--fs-1);
+            line-height: var(--fs-5);
+            font-weight: var(--fw-medium);
+            color: var(--gray-10);
+            gap: 8px;
+            .ld-link {
+                text-decoration: none;
+                color: var(--gray-10);
+            }
+
+            .ld-link {
+                text-decoration: none;
+                color: var(--gray-10);
+                
+                &:hover{
+                    color: #f84b05;
+                }
+    
+            }
+
+            &:hover{
+                color: #f84b05;
+            }
+
+            .ld-arrow-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

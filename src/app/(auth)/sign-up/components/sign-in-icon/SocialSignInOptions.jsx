@@ -19,8 +19,9 @@ const SocialSignInOptions = ({ ...props }) => {
             disabled={disabled}
             size="small"
             iconProps={{
+              className: "sgnup-with-icon",
               fontSize: "large",
-              sx: { height: "40px", width: "40px" },
+              // sx: { height: "40px", width: "40px" },
             }}
           />
         );

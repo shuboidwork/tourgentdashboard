@@ -31,6 +31,8 @@ import {
   Apartment,
   HistoryEdu,
   LocationOnOutlined,
+  FamilyRestroom,
+  Add,
 } from "@mui/icons-material";
 
 const IMap = {
@@ -66,6 +68,8 @@ const IMap = {
   APARTMENT: Apartment,
   NOTES: HistoryEdu,
   LOCATION_ON_OL: LocationOnOutlined,
+  FAMILY: FamilyRestroom,
+  ADD: Add,
 
 };
 

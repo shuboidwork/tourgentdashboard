@@ -1,0 +1,13 @@
+@mixin background-image($background-image) {
+  background-image: url($background-image);
+}
+
+@mixin background-properties($background-image, $background-size: contain, $background-position: center) {
+  background-size: $background-size;
+  background-position: $background-position;
+  background-repeat: no-repeat;
+
+  @if $background-image != "" {
+    background-image: url($background-image);
+  }
+}
