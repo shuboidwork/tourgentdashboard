@@ -64,6 +64,7 @@ const NavigationMenu = ({ items = [], children }) => {
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxShadow: '4px 4px 12px 0px #BBBBBB40',// --nav-shadow
+            overflow: "hidden"
           },
         }}>
           <Toolbar />
