@@ -74,7 +74,7 @@ const NavigationMenu = ({ items = [], children }) => {
           </Box>
         </Drawer>
       </Grid2>
-      <Box sx={{ flexGrow: 1, p: 3 }}>
+      <Box sx={{ flexGrow: 1, p: 3 }} className="content-wrapper">
         <Toolbar />
         {children}
       </Box>

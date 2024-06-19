@@ -1,4 +1,6 @@
 @import "../../../styles/importer";
+$drawerWidth : 240px;
+
 .navBar {
     box-shadow: var(--nav-shadow) !important;
     .li-btn {
@@ -14,9 +16,9 @@
                 left: 0px;
                 width: 5px;
                 height: 100%;
-                background: var(--primary);
+                background: var(--primary-gradient);
                 border-radius: 20px;
-                padding: 5px;
+                padding: 4px;
             }
         }
         .li-cont {
@@ -40,4 +42,7 @@
             }
         }
     }
+}
+.content-wrapper{
+    margin-left: $drawerWidth;
 }

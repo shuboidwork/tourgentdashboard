@@ -22,7 +22,7 @@ const LeadInfoHeader = () => {
       <>
         <Icon className={clsx("info-icon",{active: isActive})} icon={icon} />
         <Link
-          className={clsx("info-lable", { disabled, active: isActive })}
+          className={clsx("info-label", { disabled, active: isActive })}
           href={routePath}
         >
           {label}
