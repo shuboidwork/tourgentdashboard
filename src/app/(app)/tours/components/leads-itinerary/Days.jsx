@@ -5,8 +5,9 @@ import { useDays } from "./DaysContext";
 import Tile from "@/app/components/views/tile";
 import { OVERVIEW_TAB } from "./constants";
 import { formatDateWithoutYear, getXDaysFutureDateByStartDate } from "@/app/utils/date-utils";
+import Button from "@/app/components/views/button";
 
-const Days = ({noOfDays, startDate}) => {
+const Days = ({noOfDays, startDate, onSave}) => {
   const { days, activeDay, switchDay, addDays } = useDays();
 
   useEffect(() => {
@@ -25,9 +26,13 @@ const Days = ({noOfDays, startDate}) => {
     addDays([OVERVIEW_TAB, ...dayTabs]);
   },[]);
 
+  const handleOnSave = () => {
+    onSave && onSave(days);
+  }
+
   return (
-    <>
-      <div className="day-tabs">
+    <div className="itin-header">
+      <div className="itin-day-tabs">
         {days
           ? days.map(({ id, label }) => {
               return (<Tile
@@ -39,7 +44,8 @@ const Days = ({noOfDays, startDate}) => {
             })
           : null}
       </div>
-    </>
+        <Button className="itin-save" title="Save" onClick={handleOnSave}/>
+      </div>
   );
 };
 

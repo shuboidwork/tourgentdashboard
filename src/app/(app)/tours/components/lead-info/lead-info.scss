@@ -23,6 +23,7 @@
                 height: 80px;
             }
             .ld-info-name {
+                color: var(--primary);
                 font-size: var(--fs-4);
                 font-weight: var(--fw-semibold);
                 line-height: var(--fs-7);
@@ -70,6 +71,6 @@
         border-radius: 0px 10px;
         border: 0px, 0px, 0px, 1px;
         padding: 24px 40px 0 40px;
-        gap: 10px;
+        gap: 16px;
     }
 }

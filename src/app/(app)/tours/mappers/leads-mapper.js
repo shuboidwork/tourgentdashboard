@@ -28,7 +28,7 @@ export const mapIncomingLeadData = ({
 
   return {
     id,
-    [LeadInfoProperties.NAME]: first_name + last_name,
+    [LeadInfoProperties.NAME]: first_name + " " + last_name,
     [LeadInfoProperties.EMAIL]: email,
     [LeadInfoProperties.PHONE]: phone,
     days: number_of_days,

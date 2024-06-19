@@ -11,13 +11,24 @@
         border: 1px solid #00000014;
         align-items: center;
         color: var(--gray);
+        &.active{
+            background: var(--primary-gradient);
+            border: none;
+            &:hover{
+                box-shadow:none;
+    
+            }
+        }
+        &:hover{
+            box-shadow: 0px 1px 2px 0px #00000040;
+        }
 
         .info-icon{
             width: 24px;
             height: 24px;
 
             &.active{
-                color: #F84B05;
+                color: var(--white);
                 //  linear-gradient(180deg, #F83800 0%, #F8640A 100%);
             }
 
@@ -26,13 +37,13 @@
             }
         }
         .info-lable{
-            font-weight: var(--fw-regular);
+            font-weight: var(--fw-semibold);
             font-size: var(--fs-2);
             line-height: var(--fs-5);
             text-decoration: none;
             color: var(--gray);
             &.active{
-                color: var(--black);
+                color: var(--white);
             }
         }
     }

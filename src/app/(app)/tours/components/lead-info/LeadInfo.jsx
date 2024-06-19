@@ -55,7 +55,7 @@ const LeadInfo = ({ children, lead}) => {
             <div className="ld-info-avatar">
               <Avatar />
             </div>
-            <div className="ld-info-name">Text</div>
+            <div className="ld-info-name">{lead?.name}</div>
           </div>
           <div className="bottom">{getSections()}</div>
         </div>

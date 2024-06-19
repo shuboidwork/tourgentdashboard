@@ -14,7 +14,7 @@ const AppHeader = () => {
     filter: "drop-shadow(#939393 2px 3px 2px)",
   };
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" className="appbar" elevation={0}>
       <Toolbar>
         <div className="apphd-lgo">
           <Airlines color="secondary" style={iconStyles}></Airlines>

@@ -14,14 +14,15 @@ const LeadInfoHeader = () => {
   const { leadId } = useParams();
   const path = usePathname();
 
-
   const getTileView = ({ label, icon, href, disabled }) => {
     const routePath = createRoutePath(href, { leadId });
+    const isActive = path === routePath;
+
     return (
       <>
-        <Icon className={clsx("info-icon",{active: (path === routePath)})} icon={icon} />
+        <Icon className={clsx("info-icon",{active: isActive})} icon={icon} />
         <Link
-          className={clsx("info-lable", { disabled, active: (path === routePath) })}
+          className={clsx("info-lable", { disabled, active: isActive })}
           href={routePath}
         >
           {label}
@@ -33,8 +34,10 @@ const LeadInfoHeader = () => {
   return (
     <div className="ldinf-hdr-cont">
       {Tiles.map((tile) => {
-        const { id } = tile;
-        return <Tile content={getTileView(tile)} key={id} className="info-tile" />;
+        const { id, href} = tile;
+        const routePath = createRoutePath(href, { leadId });
+        const isActive = path === routePath;
+        return <Tile content={getTileView(tile)} key={id} className={clsx("info-tile", {active : isActive})} />;
       })}
     </div>
   );

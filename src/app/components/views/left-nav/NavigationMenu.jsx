@@ -21,7 +21,7 @@ const drawerWidth = 240;
 const Sidebar = ({ items = [] }) => {
   const pathName = usePathname();
   return (
-    <List >
+    <List>
       {items.map(({ id, label, link, icon }) => {
         const ItemIcon = Icons[icon];
         const selected = pathName.startsWith(link);
@@ -32,7 +32,7 @@ const Sidebar = ({ items = [] }) => {
             key={id}
             style={{ padding: 0 }}
           >
-            <ListItemButton style={{ padding: "12px 16px" }}>
+            <ListItemButton className={clsx("li-btn", { selected })}>
               <div className="li-cont">
                 <div className="li-icon">
                   <ItemIcon
@@ -58,9 +58,9 @@ const NavigationMenu = ({ items = [], children }) => {
       <Grid2 xs={12}>
         <AppHeader />
       </Grid2>
-      <Grid2 sx={{ width: drawerWidth}} className="boxShadow">
+      <Grid2 sx={{ width: drawerWidth }}>
         <Drawer variant="permanent">
-          <Toolbar/>
+          <Toolbar />
           <Box
             sx={{
               flexGrow: 1,
@@ -68,12 +68,13 @@ const NavigationMenu = ({ items = [], children }) => {
               width: drawerWidth,
               overflow: "auto",
             }}
+            className="navBar"
           >
             <Sidebar items={items} />
           </Box>
         </Drawer>
       </Grid2>
-      <Box md={12} sx={{ flexGrow: 1, p: 3}}>
+      <Box sx={{ flexGrow: 1, p: 3 }}>
         <Toolbar />
         {children}
       </Box>

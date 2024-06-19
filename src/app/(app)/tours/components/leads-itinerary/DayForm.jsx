@@ -31,7 +31,7 @@ const DayForm = () => {
     const removeBulletsAndClean = (text) => {
       return text
         .split("\n")
-        .map((line) => line.replace(/•\s*/, "").trim())
+        .map((line) => line.replace(/•\s*/g, ""))
         .map((line) => line.replace(/\s+/g, " "));
     };
     return removeBulletsAndClean(value);
@@ -81,7 +81,7 @@ const DayForm = () => {
       <form className="day-frm">
         <Input
           type={InputTypes.MULTILINE}
-          rows={4}
+          rows={2}
           className="day-content-inp"
           value={addBullets(content)}
           onChange={handleContentChange}

@@ -6,6 +6,7 @@
     gap: 32px;
     width: 100%;
     color: var(--gray);
+    background: var(--white);
 
     .ld-lft {
         display: flex;
@@ -41,7 +42,7 @@
                 color: var(--black);
 
                 &.blue {
-                    background-color: var(--blue);
+                    background: var(--status-blue);
                 }
             }
         }

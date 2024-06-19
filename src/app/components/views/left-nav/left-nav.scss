@@ -1,24 +1,43 @@
 @import "../../../styles/importer";
-.boxShadow{ 
-   box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
-}
-.li-cont {
-    display: flex;
-    gap: 4px;
-    .li-icon {
-        display: flex;
-    }
-    .li-text {
-        display: flex;
-        font-size: var(--fs-3);
-        font-weight: var(--fw-medium);
-        line-height: 150%;
-        letter-spacing: 0.15px;
-        align-items: center;
-        color: #939393;
+.navBar {
+    box-shadow: var(--nav-shadow) !important;
+    .li-btn {
+        padding: 12px 25px;
 
         &.selected {
-            color: #000000;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0px;
+                width: 5px;
+                height: 100%;
+                background: var(--primary);
+                border-radius: 20px;
+                padding: 5px;
+            }
+        }
+        .li-cont {
+            display: flex;
+            gap: 4px;
+            .li-icon {
+                display: flex;
+            }
+            .li-text {
+                display: flex;
+                font-size: var(--fs-3);
+                font-weight: var(--fw-medium);
+                line-height: 150%;
+                letter-spacing: 0.15px;
+                align-items: center;
+                color: #939393;
+
+                &.selected {
+                    color: #000000;
+                }
+            }
         }
     }
 }
