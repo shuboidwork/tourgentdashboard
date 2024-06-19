@@ -1,6 +1,9 @@
 @import "../../../styles/importer";
 $drawerWidth : 240px;
 
+.customDrawerShadow{
+    box-shadow: var(--nav-shadow);
+}
 .navBar {
     box-shadow: var(--nav-shadow) !important;
     .li-btn {

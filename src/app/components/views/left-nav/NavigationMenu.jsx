@@ -59,7 +59,13 @@ const NavigationMenu = ({ items = [], children }) => {
         <AppHeader />
       </Grid2>
       <Grid2 sx={{ width: drawerWidth }}>
-        <Drawer variant="permanent">
+        <Drawer variant="permanent" 
+         sx={{
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
+            boxShadow: '4px 4px 12px 0px #BBBBBB40',// --nav-shadow
+          },
+        }}>
           <Toolbar />
           <Box
             sx={{

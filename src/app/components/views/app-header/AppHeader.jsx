@@ -29,13 +29,13 @@ const AppHeader = () => {
             width: "100%",
           }}
         >
-          <Button
+          {/* <Button
             title="Logout"
             type={ButtonTypes.PRIMARY}
             size="small"
             onClick={() => signOut()}
             sx={{ display: "inline" }}
-          ></Button>
+          ></Button> */}
         </Box>
       </Toolbar>
     </AppBar>
