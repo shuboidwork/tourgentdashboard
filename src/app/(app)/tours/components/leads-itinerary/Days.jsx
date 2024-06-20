@@ -44,7 +44,7 @@ const Days = ({noOfDays, startDate, onSave}) => {
             })
           : null}
       </div>
-        <Button className="itin-save" title="Save" onClick={handleOnSave}/>
+        {/* <Button className="itin-save" title="Save" onClick={handleOnSave}/> */}
       </div>
   );
 };

@@ -17,7 +17,7 @@ export default async function middleware(req) {
     } else if (session && (path === '/login' || path === '/sign-up')) {
         return NextResponse.redirect(new URL('/tours', req.url))
     }
-    // return NextResponse.next()
+    return NextResponse.next()
 }
 
 export const config = {

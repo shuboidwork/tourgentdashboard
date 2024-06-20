@@ -18,6 +18,6 @@ const MuiFlagIcon = ({
 MuiFlagIcon.propTypes = {
   height: PropTypes.number,
   width: PropTypes.number,
-  type: PropTypes.oneOf(IconFlagTypes),
+  type: PropTypes.oneOf(Object.values(IconFlagTypes)),
 };
 export { MuiFlagIcon as default, IconFlagTypes };

@@ -4,26 +4,35 @@ import "./metric-tile.scss";
 import Tile from "@/app/components/views/tile";
 import Icon from "@/app/components/views/icon";
 import PropTypes from "prop-types";
-import {redirect, usePathname} from 'next/navigation'
+import { redirect, usePathname } from "next/navigation";
 import clsx from "clsx";
-const MetricTile = ({id, icon, label, count, href}) => {
+import Link from "next/link";
+const MetricTile = ({ id, icon, label, count, href }) => {
   const path = usePathname();
 
   const onClickHandler = () => {
     redirect(href);
-  }
+  };
   const getView = () => {
-    return (<>       <div className="mtrc-header">
-          <Icon className={"mtrc-icon"} icon={icon}/>
+    return (
+      <Link href={href} className="mtrc-link">
+        <div className="mtrc-header">
+          <Icon className={"mtrc-icon"} icon={icon} />
           <div className="mtrc-label">{label}</div>
         </div>
-        <div className="mtrc-count">
-          {count}
-        </div></>
+        <div className="mtrc-count">{count}</div>
+      </Link>
     );
   };
 
-  return <Tile className={clsx("mtrc-cont", {active: path.includes(href)})} content={getView()} key={id} onClick={onClickHandler} />;
+  return (
+    <Tile
+      className={clsx("mtrc-cont", { active: path.includes(href) })}
+      content={getView()}
+      key={id}
+      onClick={onClickHandler}
+    />
+  );
 };
 MetricTile.propTypes = {
   id: PropTypes.string,
