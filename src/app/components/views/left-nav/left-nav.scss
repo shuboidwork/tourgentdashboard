@@ -1,6 +1,7 @@
 @import "../../../styles/importer";
-.navBar {
+    .drawer {
     box-shadow: var(--nav-shadow) !important;
+    z-index: 1000;
     .li-btn {
         padding: 12px 25px;
 
