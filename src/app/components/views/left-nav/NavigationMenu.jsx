@@ -52,40 +52,39 @@ const Sidebar = ({ items = [] }) => {
 
 const NavigationMenu = ({ items = [], children }) => {
   return (
-    <Grid2 container spacing={0}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
-
-      <Grid2 xs={12}>
-        <AppHeader />
-      </Grid2>
-      <Grid2 sx={{ width: drawerWidth }}>
-        <Drawer variant="permanent" 
-         sx={{
-          '& .MuiDrawer-paper': {
+      <AppHeader />
+      <Drawer
+        className="drawer"
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          "& .MuiDrawer-paper": {
             width: drawerWidth,
-            boxShadow: '4px 4px 12px 0px #BBBBBB40',// --nav-shadow
-            overflow: "hidden"
+            boxSizing: "border-box",
           },
-        }}>
-          <Toolbar />
-          <Box
-            sx={{
-              flexGrow: 1,
-              flexShrink: 0,
-              width: drawerWidth,
-              overflow: "auto",
-            }}
-            className="navBar"
-          >
-            <Sidebar items={items} />
-          </Box>
-        </Drawer>
-      </Grid2>
-      <Box sx={{ flexGrow: 1, p: 3 }} className="content-wrapper">
+        }}
+        variant="permanent"
+        anchor="left"
+      >
+        <Toolbar />
+        <Sidebar items={items} />
+      </Drawer>
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          bgcolor: "background.default",
+          p: 3,
+          overflow: "auto",
+          minHeight: "100vh",
+        }}
+      >
         <Toolbar />
         {children}
       </Box>
-    </Grid2>
+    </Box>
   );
 };
 NavigationMenu.propTypes = {
