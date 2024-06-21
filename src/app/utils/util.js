@@ -20,11 +20,3 @@ export const getCurrentBreakpoint = (theme) => {
   if (isXl) return "xl";
   return "xs";
 };
-
-// Utility function to calculate the width based on a percentage of the screen width
-export const getResponsiveWidth = (percent, minWidth, maxWidth = Infinity) => {
-  const screenWidth = window.innerWidth;
-  const calculatedWidth = screenWidth * (percent / 100);
-
-  return Math.min(Math.max(minWidth, calculatedWidth), maxWidth);
-}

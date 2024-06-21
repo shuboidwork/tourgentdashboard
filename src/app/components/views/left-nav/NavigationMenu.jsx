@@ -14,10 +14,8 @@ import Link from "next/link";
 import "./left-nav.scss";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import { getResponsiveWidth } from "@/app/utils/util";
-const MIN_DRAWER_WIDTH = 240;
-const MAX_DRAWER_WIDTH = 280;
-
+import { getCurrentBreakpoint } from "@/app/utils/util";
+import { useTheme } from "@mui/material";
 
 const Sidebar = ({ items = [] }) => {
   const pathName = usePathname();
@@ -52,8 +50,21 @@ const Sidebar = ({ items = [] }) => {
 };
 
 const NavigationMenu = ({ items = [], children }) => {
-  const drawerWidthPercentage = 20; // 20% of the screen width
-  const drawerWidth = getResponsiveWidth(drawerWidthPercentage, MIN_DRAWER_WIDTH, MAX_DRAWER_WIDTH);
+  const theme = useTheme()
+  const currentBreakpoint = getCurrentBreakpoint(theme);
+
+  //Configure this as per need 
+  const getDrawerWidth = () => {
+    switch (currentBreakpoint) {
+      case 'xs':
+      case 'sm':
+      case 'md':
+      case 'lg':
+      case 'xl':
+      default:
+        return 240; // default width
+    }
+  };
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -62,10 +73,10 @@ const NavigationMenu = ({ items = [], children }) => {
       <Drawer
         className="drawer"
         sx={{
-          width: drawerWidth,
+          width: getDrawerWidth(),
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: drawerWidth,
+            width: getDrawerWidth(),
             boxSizing: "border-box",
           },
         }}
