@@ -8,7 +8,9 @@
     gap: 3px;
     color: var(--black) !important;
     border-radius: 10px !important;
-    min-width: 240px;
+    width: 25%;
+    max-width: 270px;
+    min-width: 200px;
     align-items: unset !important;
     cursor: pointer;
     &:hover {

@@ -14,9 +14,10 @@ import Link from "next/link";
 import "./left-nav.scss";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import { getResponsiveWidth } from "@/app/utils/util";
+const MIN_DRAWER_WIDTH = 240;
+const MAX_DRAWER_WIDTH = 280;
 
-const drawerWidth = 240;
 
 const Sidebar = ({ items = [] }) => {
   const pathName = usePathname();
@@ -51,6 +52,9 @@ const Sidebar = ({ items = [] }) => {
 };
 
 const NavigationMenu = ({ items = [], children }) => {
+  const drawerWidthPercentage = 20; // 20% of the screen width
+  const drawerWidth = getResponsiveWidth(drawerWidthPercentage, MIN_DRAWER_WIDTH, MAX_DRAWER_WIDTH);
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />

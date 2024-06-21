@@ -4,7 +4,6 @@ import { createTheme } from "@mui/material/styles";
 
 // const { fontFamily } = poppins_init.style;
 
-
 const theme = createTheme({
   zIndex: {
     drawer: 1200,
@@ -30,32 +29,42 @@ const theme = createTheme({
     gray: { main: "#939393" },
     black: { main: "#000000" },
   },
+
   components: {
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          '&.Mui-focused': {
-            backgroundColor: 'transparent',
+          "&.Mui-focused": {
+            backgroundColor: "transparent",
           },
-          '& fieldset': {
+          "& fieldset": {
             borderColor: "#eaeaea",
           },
-          '&.Mui-disabled .MuiOutlinedInput-notchedOutline': {
-            borderColor: 'inherit',
+          "&.Mui-disabled .MuiOutlinedInput-notchedOutline": {
+            borderColor: "inherit",
           },
-          '&.Mui-disabled:hover .MuiOutlinedInput-notchedOutline': {
-            borderColor: 'inherit',
+          "&.Mui-disabled:hover .MuiOutlinedInput-notchedOutline": {
+            borderColor: "inherit",
           },
-          ':hover .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#f4f4f4',
+          ":hover .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#f4f4f4",
           },
           // '&.Mui-focused fieldset': {
           //   borderWidth: '1px'
           // },
         },
-      }
+      },
     },
-  }
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
 });
 
 export default theme;
