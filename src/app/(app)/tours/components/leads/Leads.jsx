@@ -1,10 +1,25 @@
-import Tile from "@/app/components/views/tile";
-import React from "react";
+'use client'
+import Tile from "@/app/components/common/tile";
+import React, { useEffect, useState } from "react";
 import LeadTile from "../lead-tile";
 import "./leads.scss";
-import Divider from "@/app/components/views/divider";
+import Divider from "@/app/components/common/divider";
+import { useStore } from "@/app/components/enhancers/useStore";
+import { getLeads } from "../../(withLayout)/leads/actions";
 
-const Leads = ({ items = [] }) => {
+const Leads = () => {
+  const { storeId } = useStore();
+  const [leads, setLeads] = useState([]);
+
+  useEffect(() => {
+    const fetchLeads = async () => {
+      const leadsList = storeId ? await getLeads(storeId) : [];
+      setLeads(leadsList);
+    };
+    fetchLeads();
+  }, [storeId])
+  
+
   const getLeadsView = () => {
     // TODO: Add filters
     return (
@@ -18,7 +33,7 @@ const Leads = ({ items = [] }) => {
         </div>
         <Divider />
         <div className="leads-list">
-          {items.map(({id,...leadInfo}) => (
+          {leads.map(({id,...leadInfo}) => (
             <LeadTile key={id} 
               id={id}
               {...leadInfo}

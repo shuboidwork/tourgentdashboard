@@ -5,8 +5,8 @@ import "./lead-info-header.scss";
 import clsx from "clsx";
 import { Tiles } from "./constants";
 import { useParams, usePathname } from "next/navigation";
-import Icon from "../../../../components/views/icon";
-import Tile from "../../../../components/views/tile";
+import Icon from "../../../../components/common/icon";
+import Tile from "../../../../components/common/tile";
 import { createRoutePath } from "../../../../utils/util";
 
 

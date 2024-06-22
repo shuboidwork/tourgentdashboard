@@ -1,17 +1,17 @@
 "use client";
 import React from "react";
 import "./lead-tile.scss";
-import Avatar from "@/app/components/views/avatar";
-import FlagIcon, { IconFlagTypes } from "@/app/components/views/flag-icon";
+import Avatar from "@/app/components/common/avatar";
+import FlagIcon, { IconFlagTypes } from "@/app/components/common/flag-icon";
 import { IconTypes } from "@/app/facts/icon-list";
-import Icon from "@/app/components/views/icon";
+import Icon from "@/app/components/common/icon";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import { GroupTypes, GroupTypesIconMapping, GroupTypesLabelMapping, Statuses } from "./constants";
 import RouteUrls from "@/app/facts/route-urls";
 import { createRoutePath } from "@/app/utils/util";
 import Link from "next/link";
-import Tile, { TileSizes } from "@/app/components/views/tile";
+import Tile, { TileSizes } from "@/app/components/common/tile";
 import { formatDate } from "@/app/utils/date-utils";
 
 const LeadTile = ({

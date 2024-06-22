@@ -1,5 +1,5 @@
 import React from "react";
-import DevInProgress from "@/app/components/views/dev-in-progress";
+import DevInProgress from "@/app/components/common/dev-in-progress";
 
 export default async function Page() {
   return (

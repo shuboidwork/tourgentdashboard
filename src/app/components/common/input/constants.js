@@ -5,6 +5,7 @@ export const InputTypes = {
   PASSWORD: "password",
   EMAIL: "email",
   SEARCH: "search",
+  SELECT: "select",
 };
 export const InputTypeVariants= {
     OUTLINED: 'outlined',

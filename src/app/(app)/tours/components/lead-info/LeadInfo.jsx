@@ -1,22 +1,34 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "./lead-info.scss";
-import Divider from "@/app/components/views/divider";
-import { DividerTypes } from "@/app/components/views/divider/constants";
-import Avatar from "@/app/components/views/avatar";
+import Divider from "@/app/components/common/divider";
+import { DividerTypes } from "@/app/components/common/divider/constants";
+import Avatar from "@/app/components/common/avatar";
 import {
   LeadInfoPropertiesIconMapping,
   LeadInfoSectionNamePropsMapping,
   LeadInfoSections,
 } from "./constants";
-import Icon from "@/app/components/views/icon";
+import Icon from "@/app/components/common/icon";
 import { IconTypes } from "@/app/facts/icon-list";
+import { useStore } from "@/app/components/enhancers/useStore";
+import getLeadInfo from "../../(withoutLayout)/leads/[leadId]/actions";
 
+const LeadInfo = ({ children, leadId }) => {
+  const [lead, setLead] = useState({});
+  const { storeId } = useStore();
 
-
-const LeadInfo = ({ children, lead}) => {
+  useEffect(() => {
+    const fetchLeadInfo = async () => {
+      if (leadId && storeId) {
+        const leadInfo = await getLeadInfo(leadId, storeId);
+        setLead(leadInfo);
+      }
+    };
+    fetchLeadInfo();
+  }, [leadId, storeId, getLeadInfo]);
+  
   const getView = () => {
-
     const getSections = () => {
       return Object.values(LeadInfoSections).map((sectionName) => {
         return (

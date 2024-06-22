@@ -1,7 +1,7 @@
 import "../globals.scss";
 import React, { Suspense } from "react";
 import PropTypes from "prop-types";
-import Loading from "../components/views/loading";
+import Loading from "../components/common/loading";
 import { poppins } from "../utils/fonts";
 import { NextAuthProvider } from "../../context/SessionProvider";
 

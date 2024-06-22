@@ -1,6 +1,7 @@
 @import "../../../styles/importer";
 .appbar {
   box-shadow: var(--nav-shadow) !important;
+  background-color: var(--white) !important;
 
   .apphd-lgo {
     display: flex;
@@ -20,5 +21,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+  }
+
+  .sel-store{
+    width: 250px;
+    align-self: flex-end;
   }
 }

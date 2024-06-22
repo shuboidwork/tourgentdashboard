@@ -1,4 +1,4 @@
-import Tile from "@/app/components/views/tile";
+import Tile from "@/app/components/common/tile";
 import React from "react";
 import LeadsItinerary from "../../../../components/leads-itinerary";
 import "./itinerary.scss";

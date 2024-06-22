@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import "./metric-tile.scss";
-import Tile from "@/app/components/views/tile";
-import Icon from "@/app/components/views/icon";
+import Tile from "@/app/components/common/tile";
+import Icon from "@/app/components/common/icon";
 import PropTypes from "prop-types";
 import { redirect, usePathname } from "next/navigation";
 import clsx from "clsx";

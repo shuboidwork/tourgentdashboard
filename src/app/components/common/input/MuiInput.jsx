@@ -74,7 +74,6 @@ const MuiInput = ({
           rows: rows,
         };
         break;
-
       default:
     }
 
@@ -90,13 +89,6 @@ const MuiInput = ({
         error={error}
         helperText={error ? errorMessage : ""}
         onBlur={(e) => handleValidation(e.target.value)}
-        style={{
-          "& .MuiOutlinedInputRoot?": {
-            "&.Mui-focused fieldset": {
-              borderColor: "#000000",
-            },
-          },
-        }}
       />
     );
   };

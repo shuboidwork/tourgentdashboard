@@ -1,6 +1,6 @@
 "use client";
-import Button from "@/app/components/views/button";
-import { ButtonTypes } from "@/app/components/views/button/constants";
+import Button from "@/app/components/common/button";
+import { ButtonTypes } from "@/app/components/common/button/constants";
 import { signIn } from "next-auth/react";
 import React from "react";
 

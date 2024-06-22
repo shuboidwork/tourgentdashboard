@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import { useDays } from "./DaysContext";
-import Input from "@/app/components/views/input";
-import { InputTypes } from "@/app/components/views/input/constants";
+import Input from "@/app/components/common/input";
+import { InputTypes } from "@/app/components/common/input/constants";
 
 import Place from "./Place";
 // import RichTextEditor from "@/app/components/views/rich-text-editor/RichTextEditor";
 import { IconTypes } from "@/app/facts/icon-list";
-import Tile from "@/app/components/views/tile";
-import Icon from "@/app/components/views/icon";
+import Tile from "@/app/components/common/tile";
+import Icon from "@/app/components/common/icon";
 
 const DayForm = () => {
   const { days, activeDay, setDayContent, setDayPlaces, addPlace} = useDays();
