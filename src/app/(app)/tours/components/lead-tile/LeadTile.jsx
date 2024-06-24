@@ -7,12 +7,12 @@ import { IconTypes } from "@/app/facts/icon-list";
 import Icon from "@/app/components/common/icon";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { GroupTypes, GroupTypesIconMapping, GroupTypesLabelMapping, Statuses } from "./constants";
 import RouteUrls from "@/app/facts/route-urls";
 import { createRoutePath } from "@/app/utils/util";
 import Link from "next/link";
 import Tile, { TileSizes } from "@/app/components/common/tile";
 import { formatDate } from "@/app/utils/date-utils";
+import { GroupTypes, GroupTypesIconMap, GroupTypesLabelMap } from "../../facts/leads-metadata";
 
 const LeadTile = ({
   id,
@@ -24,7 +24,7 @@ const LeadTile = ({
   startDate,
   endDate,
   groupType = GroupTypes.SOLO,
-  status = Statuses.INTERESTED,
+  status,
   statusType = "blue",
 }) => {
   const getView = () => {
@@ -75,9 +75,9 @@ const LeadTile = ({
             <div className="ld-type">
               <div className="ld-item">
                 <div className="ld-icon">
-                  <Icon icon={GroupTypesIconMapping[groupType]} className="ld-icon" />
+                  <Icon icon={GroupTypesIconMap[groupType] || IconTypes.SOLO} className="ld-icon" />
                 </div>
-                {GroupTypesLabelMapping[groupType]}
+                {GroupTypesLabelMap[groupType]}
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@ LeadTile.propTypes = {
   startDate: PropTypes.string,
   endDate: PropTypes.string,
   groupType: PropTypes.oneOf(Object.values(GroupTypes)),
-  status: PropTypes.oneOf(Object.values(Statuses)),
+  status: PropTypes.string,
   statusType: PropTypes.string,
 };
 export default LeadTile;

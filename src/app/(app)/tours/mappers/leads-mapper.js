@@ -1,5 +1,5 @@
 import { formatDate, getXDaysFutureDate } from "@/app/utils/date-utils";
-import { LeadStatusesIds, LeadStatusesLabelMap } from "../facts/leads-metadata";
+import { DietaryPreferenceLabelMap, GroupTypesLabelMap, LeadStatusesIds, LeadStatusesLabelMap, VacationTypeLabelMap } from "../facts/leads-metadata";
 import { LeadInfoProperties } from "../components/lead-info/constants";
 
 export const mapIncomingLeadData = ({
@@ -33,15 +33,15 @@ export const mapIncomingLeadData = ({
     [LeadInfoProperties.PHONE]: phone,
     days: number_of_days,
     people: number_of_people,
-    [LeadInfoProperties.DIETARY]: dietary_preference,
-    status: LeadStatusesLabelMap[LeadStatusesIds[status]],
+    [LeadInfoProperties.DIETARY]: DietaryPreferenceLabelMap[dietary_preference] || dietary_preference,
+    status: LeadStatusesLabelMap[LeadStatusesIds[status]] || "",
     startDate: getXDaysFutureDate(30),
     endDate: getXDaysFutureDate(30 + number_of_days),
-    [LeadInfoProperties.GROUP_TYPE]: group_type,
+    [LeadInfoProperties.GROUP_TYPE]: GroupTypesLabelMap[group_type] || group_type,
     [LeadInfoProperties.GENDER]: "Male",
     [LeadInfoProperties.AGE]: "30",
     [LeadInfoProperties.WORK]: "Developer",
     [LeadInfoProperties.DESTINATION]: destination,
-    [LeadInfoProperties.VACATION_TYPE]: vacation_type,
+    [LeadInfoProperties.VACATION_TYPE]: VacationTypeLabelMap[vacation_type] || vacation_type,
   };
 };
