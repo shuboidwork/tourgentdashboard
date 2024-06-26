@@ -1,14 +1,14 @@
-import { formatDate, getXDaysFutureDate } from "@/app/utils/date-utils";
+import {getXDaysFutureDate } from "@/app/utils/date-utils";
 import { DietaryPreferenceLabelMap, GroupTypesLabelMap, LeadStatusesIds, LeadStatusesLabelMap, VacationTypeLabelMap } from "../facts/leads-metadata";
 import { LeadInfoProperties } from "../components/lead-info/constants";
-
 export const mapIncomingLeadData = ({
   data,
   status,
   lead_profile,
   store_customer,
   id,
-  store,
+  store: storeId,
+  itinerary: itineraryId
 }) => {
   const { destination } = data;
   const { first_name, last_name, email, phone } = store_customer;
@@ -28,6 +28,8 @@ export const mapIncomingLeadData = ({
 
   return {
     id,
+    storeId,
+    itineraryId,
     [LeadInfoProperties.NAME]: first_name + " " + last_name,
     [LeadInfoProperties.EMAIL]: email,
     [LeadInfoProperties.PHONE]: phone,

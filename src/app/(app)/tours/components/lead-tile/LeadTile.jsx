@@ -77,7 +77,8 @@ const LeadTile = ({
                 <div className="ld-icon">
                   <Icon icon={GroupTypesIconMap[groupType] || IconTypes.SOLO} className="ld-icon" />
                 </div>
-                {GroupTypesLabelMap[groupType]}
+                {groupType}
+                {/* {GroupTypesLabelMap[groupType]} */}
               </div>
             </div>
           </div>

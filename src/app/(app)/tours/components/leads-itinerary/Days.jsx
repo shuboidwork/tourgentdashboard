@@ -10,26 +10,57 @@ import {
 } from "@/app/utils/date-utils";
 import Button from "@/app/components/common/button";
 
-const Days = ({ noOfDays, startDate, onSave }) => {
+const Days = ({ noOfDays, startDate, onSave, itinInfo }) => {
   const { days, activeDay, switchDay, addDays } = useDays();
 
   useEffect(() => {
     const dayTabs = [];
     for (let i = 0; i < noOfDays; i++) {
+      let content = "";
+      let places = [];
       const dayNumber = i + 1;
+      const dayId = `day${dayNumber}`;
       const dayDate = formatDateWithoutYear(
         getXDaysFutureDateByStartDate(startDate, i)
       );
+
+      if (itinInfo?.details) {
+        const savedDayData = itinInfo.details.filter(({ id }) => id === dayId);
+        content = getSavedDayContent(savedDayData[0]);
+        places =  getSavedDayPlaces(savedDayData[0]);
+      }
+
       dayTabs.push({
         dayNumber: dayNumber,
-        id: `day${dayNumber}`,
+        id: dayId,
         label: dayDate,
-        content: "",
-        places: [],
+        content: content,
+        places: places,
       });
     }
-    addDays([OVERVIEW_TAB, ...dayTabs]);
-  }, []);
+    const overviewTab = getOverviewTabDetails(itinInfo?.details);
+    addDays([overviewTab, ...dayTabs]);
+  }, [noOfDays, itinInfo]);
+
+  const getSavedDayContent = (savedDayData) => {
+    return savedDayData?.content ? savedDayData.content : "";
+  };
+
+  const getSavedDayPlaces = (savedDayData) => {
+    return savedDayData?.places ? savedDayData.places : "";
+  };
+
+  const getOverviewTabDetails = (savedDetails) => {
+    if (savedDetails) {
+      const savedOverviewData = savedDetails.filter(
+        ({ id }) => id === "overview"
+      );
+      const content = savedOverviewData[0]?.content || "";
+      return { ...OVERVIEW_TAB, content };
+    } else {
+      return OVERVIEW_TAB;
+    }
+  };
 
   const handleOnSave = () => {
     onSave && onSave(days);

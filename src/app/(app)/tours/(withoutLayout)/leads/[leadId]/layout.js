@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import Loading from "../../../../../components/common/loading";
 import LeadInfo from "../../../components/lead-info/LeadInfo";
 import LeadInfoHeader from "../../../components/lead-info-header";
-import getLeadInfo from "./actions";
-import { useStore } from "@/app/components/enhancers/useStore";
 
 export const metadata = {
   title: "Lead Info",
