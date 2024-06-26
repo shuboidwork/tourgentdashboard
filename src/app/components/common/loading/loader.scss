@@ -1,0 +1,11 @@
+.loader-cont {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    .loader {
+        color: var(--primary-20) !important;
+    }
+}

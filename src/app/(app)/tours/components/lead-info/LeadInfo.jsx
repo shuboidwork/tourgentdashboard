@@ -13,21 +13,27 @@ import Icon from "@/app/components/common/icon";
 import { IconTypes } from "@/app/facts/icon-list";
 import { useStore } from "@/app/components/enhancers/useStore";
 import getLeadInfo from "../../(withoutLayout)/leads/[leadId]/actions";
+import Loader from "@/app/components/common/loading";
 
 const LeadInfo = ({ children, leadId }) => {
   const [lead, setLead] = useState({});
+  const [loading, setLoading] = useState(false);
   const { storeId } = useStore();
 
   useEffect(() => {
     const fetchLeadInfo = async () => {
+      setLoading(true);
       if (leadId && storeId) {
         const leadInfo = await getLeadInfo(leadId, storeId);
         setLead(leadInfo);
+        setLoading(false);
+      } else {
+        setLoading(true);
       }
     };
     fetchLeadInfo();
   }, [leadId, storeId, getLeadInfo]);
-  
+
   const getView = () => {
     const getSections = () => {
       return Object.values(LeadInfoSections).map((sectionName) => {
@@ -77,6 +83,6 @@ const LeadInfo = ({ children, leadId }) => {
     );
   };
 
-  return <div className="ld-info-cont">{getView()}</div>;
+  return loading ? <Loader /> : <div className="ld-info-cont">{getView()}</div>;
 };
 export default LeadInfo;
